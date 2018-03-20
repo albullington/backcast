@@ -15,6 +15,7 @@
     <h5 style="border:none;">
       <br/><br/>this message will disappear when <em>app</em> view is correctly rendered<br/><br/><br/>
     </h5>
+    <div id="videos"></div>
   </div>
 
 
@@ -27,9 +28,12 @@
   <script src="src/views/videoList.js"></script>
   <script src="src/views/videoListEntry.js"></script>
   <script src="src/views/videoPlayer.js"></script>
+  <script src="src/data/exampleVideoData.js"></script>
 
   <script>
     backboneReady(() => {
+      var videos = new Videos(exampleVideoData);
+      // new AppView({el: $('#app'), collection: videos}).render();
       new AppView();
     });
   </script>
